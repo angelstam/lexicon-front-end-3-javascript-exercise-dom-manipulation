@@ -24,6 +24,7 @@ footerAddress.innerHTML = "Sinus skateboards <br>Räjlsvägen 13 <br>1337, Rämp
 
 let allPs = document.querySelectorAll("p");
 allPs.forEach(p => p.style.backgroundColor = "red");
+// Probably better to use https://github.com/dvtng/jss or https://stackoverflow.com/a/19613731
 
 let allButtons = document.querySelectorAll("button");
 allButtons.forEach(button => button.textContent = "add to cart");
