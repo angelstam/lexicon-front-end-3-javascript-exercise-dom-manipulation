@@ -32,3 +32,31 @@ navFirst.classList.add("active");
 
 headerImg = document.querySelector("header>img");
 headerImg.classList.remove("logo");
+
+
+// Add Content
+
+newMenuItem = document.createElement("a");
+newMenuItem.textContent = "New Item";
+newMenuItem.setAttribute("href","#");
+headerNav = document.querySelector("header>nav");
+headerNavCart = document.querySelector("header>nav>img");
+headerNav.insertBefore(newMenuItem, headerNavCart);
+
+main = document.querySelector("main");
+main.insertAdjacentHTML("beforeend", `<article class="art-4">
+<figure><img src="img/hoodie-forrest.png" alt="hoodie"></figure>
+<h2>Sinus Hoodie</h2>
+<h3>Forrest</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolores.</p>
+<button>buy</button>
+</article>`);
+
+
+// Events
+
+headerImg.addEventListener("click", event => console.log('found you!'));
+
+articleListener = e => console.log(e);
+articles = document.querySelectorAll("main>article");
+articles.forEach(article => article.addEventListener("click", articleListener));
